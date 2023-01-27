@@ -1,3 +1,4 @@
+import { EmailOutlined, Phone } from "@mui/icons-material";
 import React from "react";
 import "./Footer.scss";
 
@@ -24,20 +25,26 @@ const Footer = () => {
         <div className="item">
           <h1>About</h1>
           <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
-            amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt
-            ut labore etdolore.
+            Powerful and unconventional — La Mode is here to redefine fashion
+            and its tactics. Whether you are the aspirational go-getter, the
+            classy working professional, or the devil introvert, we are here to
+            style you from top-to-bottom, as you take the lead of crafting your
+            life, like a complete stunner. At La Mode, we dare you to be your
+            own style icon!
           </span>
         </div>
         <div className="item">
           <h1>Contact</h1>
-          <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
-            amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt
-            ut labore etdolore.
-          </span>
+          <div>
+            <div className="iconsContainer">
+              <Phone className="icons" />
+              <span className="iconText">+91 01234-56789</span>{" "}
+            </div>
+            <div className="iconsContainer">
+              <EmailOutlined className="icons" />{" "}
+              <span className="iconText">lamode@modeworld.com</span>
+            </div>
+          </div>
         </div>
       </div>
       <div className="bottom">

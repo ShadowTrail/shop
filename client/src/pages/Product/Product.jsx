@@ -11,12 +11,11 @@ import { addToCart } from "../../redux/cartReducer";
 
 const Product = () => {
   const id = useParams().id;
-  const [selectedImg, setSelectedImg] = useState("img");
+  const [selectedImg, setSelectedImg] = useState(`img`);
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
   const { data, loading } = useFetch(`/products/${id}?populate=*`);
-
   return (
     <div className="product">
       {loading ? (
@@ -34,20 +33,16 @@ const Product = () => {
                 onClick={(e) => setSelectedImg(`img`)}
               />
               <img
-                src={
-                  process.env.REACT_APP_UPLOAD_URL +
-                  data?.attributes?.img2?.data?.attributes?.url
-                }
+                src={process.env.REACT_APP_UPLOAD_URL +
+                  data?.attributes?.img2?.data?.attributes?.url}
                 alt=""
                 onClick={(e) => setSelectedImg(`img2`)}
               />
             </div>
             <div className="mainImg">
               <img
-                src={
-                  process.env.REACT_APP_UPLOAD_URL +
-                  data?.attributes[selectedImg]?.data?.attributes?.url
-                }
+                src={process.env.REACT_APP_UPLOAD_URL +
+                  data?.attributes[selectedImg]?.data?.attributes?.url}
                 alt=""
               />
             </div>
@@ -91,11 +86,6 @@ const Product = () => {
               <div className="item">
                 <BalanceIcon /> ADD TO COMPARE
               </div>
-            </div>
-            <div className="info">
-              <span>Vendor: Polo</span>
-              <span>Product Type: T-Shirt</span>
-              <span>Tag: T-Shirt, Women, Top</span>
             </div>
             <hr />
             <div className="info">

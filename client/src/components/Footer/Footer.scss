@@ -22,6 +22,8 @@
       span {
         color: gray;
       }
+
+
     }
   }
 
@@ -52,6 +54,11 @@
       img {
         height: 50px;
       }
+    }
+    .iconsContainer{
+     align-items: center;
+     display: flex;
+     margin-bottom: 20px;
     }
   }
 }

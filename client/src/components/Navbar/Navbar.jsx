@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -6,12 +6,12 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
-// import Cart from "../Cart/Cart";
-// import { useSelector } from "react-redux";
+import Cart from "../Cart/Cart";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  // const [open, setOpen] = useState(false);
-  // const products = useSelector((state) => state.cart.products);
+  const [open, setOpen] = useState(false);
+  const products = useSelector((state) => state.cart.products);
 
   return (
     <div className="navbar">
@@ -76,15 +76,15 @@ const Navbar = () => {
             <FavoriteBorderOutlinedIcon />
             <div
               className="cartIcon"
-              // onClick={() => setOpen(!open)}
+              onClick={() => setOpen(!open)}
             >
               <ShoppingCartOutlinedIcon />
-              {/* <span>{products.length}</span> */}
+              <span>{products.length}</span>
             </div>
           </div>
         </div>
       </div>
-      {/* {open && <Cart />} */}
+      {open && <Cart />}
     </div>
   );
 };

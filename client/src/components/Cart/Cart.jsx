@@ -20,7 +20,7 @@ const Cart = () => {
   };
 
   const stripePromise = loadStripe(
-    "pk_test_eOTMlr8usx1ctymXqrik0ls700lQCsX2UB"
+    "pk_test_51MUmY8SHJFv2nvgyMJ0tr2zUVPmHsx6R0AKsl2s5QQgCjzHehZ8fZou9i3Hm1YpvFCpLXTR1Fzi9OXxOOr5W7qaI00xPcAVFnm"
   );
   const handlePayment = async () => {
     try {
@@ -45,7 +45,7 @@ const Cart = () => {
             <h1>{item.title}</h1>
             <p>{item.desc?.substring(0, 100)}</p>
             <div className="price">
-              {item.quantity} x ${item.price}
+              {item.quantity} x ₹{item.price}
             </div>
           </div>
           <DeleteOutlinedIcon
@@ -56,7 +56,7 @@ const Cart = () => {
       ))}
       <div className="total">
         <span>SUBTOTAL</span>
-        <span>${totalPrice()}</span>
+        <span>₹{totalPrice()}</span>
       </div>
       <button onClick={handlePayment}>PROCEED TO CHECKOUT</button>
       <span className="reset" onClick={() => dispatch(resetCart())}>
