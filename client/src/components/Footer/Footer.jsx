@@ -41,7 +41,7 @@ const Footer = () => {
               <span className="iconText">+91 01234-56789</span>{" "}
             </div>
             <div className="iconsContainer">
-              <EmailOutlined className="icons" />{" "}
+              <EmailOutlined className="icons" />{"  "}
               <span className="iconText">lamode@modeworld.com</span>
             </div>
           </div>
